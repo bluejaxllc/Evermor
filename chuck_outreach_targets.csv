@@ -1,0 +1,10 @@
+Name,Role,Organization,Email,Phone,Address,Source
+Erik Kritzer,Manager,LINK Entertainment,erik@link-ent.com,424-208-7303,"1640 S Sepulveda #101, Los Angeles CA 90025",Direct Web Scrape
+Aaron Norris,Brother / President,Norris Brothers Entertainment / Gersh Agency,N/A,310-274-6611 (Gersh Agency),"232 N Canon Dr, Beverly Hills CA 90210",Industry Directory
+Mike Norris,Son / Director,Norris Film Works / 2nd Fiddle Entertainment,N/A,N/A,"7827 W Lovers Lane, Dallas TX 75225",Encyclopedia Scrape
+Eric Norris,Son / Stunt Coordinator,Stunts Unlimited,N/A,818-501-1970,N/A,Stunts Unlimited Roster
+Gena O'Kelley (via Foundation),Wife / Co-Chair,Kickstart Kids Foundation,info@kickstartkids.org,713-868-6003,"10222 Westheimer Rd, Houston TX 77042",Foundation Contact Page
+Amanda Baetz,Director of Development,Kickstart Kids Foundation,abaetz@kickstartkids.org,713-868-6003,"10222 Westheimer Rd, Houston TX 77042",Volunteer Database
+Kickstart Kids Press,Press/Media,Kickstart Kids Foundation,press@kickstartkids.org,713-868-6003,"10222 Westheimer Rd, Houston TX 77042",Foundation Contact Page
+Kickstart Kids Fundraising,Fundraising,Kickstart Kids Foundation,fundraising@kickstartkids.org,713-868-6003,"10222 Westheimer Rd, Houston TX 77042",Foundation Contact Page
+Morning Kick Support,Business Venture,Roundhouse Provisions,support@roundhouseprovisions.com,888-872-4548,N/A,D2C Brand Scrape
