@@ -1032,3 +1032,28 @@ img {
         transition: none !important;
     }
 }
+
+/* =========================================================================
+   MEMORIAL TRIBUTE BANNER
+   ========================================================================= */
+
+.memorial-banner {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    position: relative;
+    z-index: 1001;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.memorial-banner p {
+    margin: 0;
+}
+
+.memorial-banner strong {
+    color: var(--color-turquoise);
+    font-weight: 600;
+}
