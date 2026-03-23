@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evermor | The Chuck Norris Eternal Archive</title>
+    <meta name="description"
+        content="Fund the world's first interactive architectural mausoleum dedicated to the legacy of Chuck Norris.">
+    <meta name="theme-color" content="#263238">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Evermor | The Chuck Norris Eternal Archive">
+    <meta property="og:description"
+        content="Fund the world's first interactive, architectural mausoleum dedicated entirely to the life, lessons, and legacy of Chuck Norris.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.evermor.me">
+    <meta property="og:image" content="https://www.evermor.me/hero.png">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💀</text></svg>">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">EVERMOR</a>
+            <div class="nav-links">
+                <a href="#vision">The Legend</a>
+                <a href="#campaign">The Campaign</a>
+                <a href="#architecture">The Archive</a>
+                <a href="#tiers">Backer Tiers</a>
+            </div>
+            <a href="#waitlist" class="btn-primary-nav">Fund the Legend</a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav">
+        <a href="#vision" class="mobile-link">The Legend</a>
+        <a href="#campaign" class="mobile-link">The Campaign</a>
+        <a href="#architecture" class="mobile-link">The Archive</a>
+        <a href="#tiers" class="mobile-link">Backer Tiers</a>
+        <a href="#waitlist" class="btn-primary-nav mobile-link">Fund the Legend</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg" style="background-image: url('hero.png');"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content reveal">
+            <h1 class="hero-headline">The Chuck Norris Eternal Archive.</h1>
+            <p class="hero-subheadline">
+                Legends never truly fade, but their wisdom deserves a permanent home. Join us in funding the world's
+                first interactive, architectural mausoleum dedicated entirely to the life, lessons, and unparalleled
+                legacy of Chuck Norris.
+            </p>
+
+            <!-- NEW: Progress Bar Component -->
+            <div id="campaign" class="funding-tracker">
+                <div class="funding-stats">
+                    <span class="funds-raised">$2,150,000</span>
+                    <span class="funds-goal">raised of $5,000,000 goal</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" style="width: 43%;"></div>
+                </div>
+                <div class="funding-footer">
+                    <span><strong>12,408</strong> Backers</span>
+                    <span><strong>15</strong> Days Left</span>
+                </div>
+            </div>
+
+            <div class="hero-cta">
+                <a href="#tiers" class="btn-primary">Back This Project</a>
+                <a href="#vision" class="btn-secondary">Explore the Vision</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- The Shift (Problem vs Solution) -->
+    <section id="vision" class="section the-shift">
+        <div class="container grids-2">
+            <!-- Block 1: The Past -->
+            <div class="shift-block past reveal-slide-left">
+                <div class="shift-label">The Status Quo</div>
+                <h2 class="shift-title">Forgotten Monuments</h2>
+                <div class="shift-divider"></div>
+                <p>Traditional memorials reduce a larger-than-life legacy to names and dates on a stone. For a man who
+                    defined strength, discipline, and American martial arts, a simple headstone leaves a massive void of
+                    lost history, wisdom, and grit.</p>
+            </div>
+
+            <!-- Block 2: The Future -->
+            <div class="shift-block future reveal-slide-right">
+                <div class="shift-label highlight">The Evermor Promise</div>
+                <h2 class="shift-title text-turquoise">A Living Dojo</h2>
+                <div class="shift-divider turquoise-bg"></div>
+                <p>We are building an interactive monument. A passive space transformed into a dynamic, experiential
+                    archive where generations can connect with Chuck's real-life experiences, hear his stories directly,
+                    and feel the presence of the legend.</p>
+            </div>
+        </div>
+
+        <div class="abstract-shape shape-1"></div>
+    </section>
+
+    <!-- Philosophy -> Archive Overview -->
+    <section id="architecture" class="section philosophy-section relative">
+        <div class="philosophy-bg" style="background-image: url('philosophy.png');"></div>
+        <div class="philosophy-overlay glass-overlay">
+            <div class="container reveal text-center mx-auto">
+                <h2 class="philosophy-title">More Than a Memorial. A Testament to Discipline.</h2>
+                <div class="philosophy-divider mx-auto"></div>
+                <p class="philosophy-body mx-auto">
+                    We believe that there is immense value in the honest human experience—especially one built on
+                    unyielding toughness and profound character.<br><br>
+                    At Evermor, <strong>we secure the past so it may empower the future</strong>. The Chuck Norris
+                    Eternal Archive will house AI-driven holograms, spatial audio lessons, and exact-likeness physical
+                    representations in a sunlit, architectural masterpiece. It is built for the living to gather, learn,
+                    and find strength in his journey.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Backer Tiers -->
+    <section id="tiers" class="section feature-section fade-bg">
+        <div class="container text-center reveal">
+            <p class="section-subtitle">Support the Legacy</p>
+            <h2 class="section-title">Campaign Backer Tiers</h2>
+            <p class="section-desc mx-auto">Secure your place in the archive's history. Choose a tier to help bring the
+                eternal dojo to life.</p>
+        </div>
+
+        <div class="container feature-grid">
+            <!-- Tier 1 -->
+            <div class="feature-card tier-card reveal-up" style="transition-delay: 0.1s;">
+                <div class="tier-price">$50</div>
+                <h3>Digital Founder</h3>
+                <p>Your name permanently etched into the Digital Founders Wall within the Archive's companion app, plus
+                    exclusive updates on the mausoleum's architectural progress.</p>
+                <button class="btn-primary mt-auto">Select Tier</button>
+            </div>
+
+            <!-- Tier 2 -->
+            <div class="feature-card tier-card highlight-tier reveal-up" style="transition-delay: 0.2s;">
+                <div class="tier-badge">Most Popular</div>
+                <div class="tier-price">$250</div>
+                <h3>Texas Ranger Plaque</h3>
+                <p>An interactive, augmented-reality copper plaque physicalized on the grounds of the mausoleum.
+                    Visitors can scan it to see your dedication message to Chuck.</p>
+                <button class="btn-primary mt-auto">Select Tier</button>
+            </div>
+
+            <!-- Tier 3 -->
+            <div class="feature-card tier-card reveal-up" style="transition-delay: 0.3s;">
+                <div class="tier-price">$5,000</div>
+                <h3>Holographic Sparring Backer</h3>
+                <p>VIP access to the archive's grand opening, plus a private interactive session in the holographic dojo
+                    suite. Includes a limited-edition bronze model of the mausoleum.</p>
+                <button class="btn-primary mt-auto">Select Tier</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA & Footer -->
+    <section id="waitlist" class="section cta-section">
+        <div class="container reveal">
+            <div class="cta-box glassmorphism mx-auto">
+                <h2>The World Needs This Wisdom.</h2>
+                <p>Enter your email to receive direct funding links and join the private backer community.</p>
+                <form class="cta-form" id="cta-form">
+                    <input type="email" placeholder="Enter your email address" required aria-label="Email address">
+                    <button type="submit" class="btn-primary">Proceed to Funding</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">EVERMOR</a>
+                <p class="footer-tagline">Redefining Remembrance.™</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Campaign Terms</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Ethics & AI Guidelines</a>
+                <a href="#">Architecture Partners</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Evermor Inc. All rights reserved. This is a hypothetical fundraising campaign.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
