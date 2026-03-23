@@ -61,7 +61,6 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body {
@@ -376,6 +375,7 @@ img {
     background-position: center;
     transform: scale(1.05);
     animation: slowZoom 20s ease-out forwards;
+    will-change: transform;
 }
 
 .hero-overlay {
@@ -581,6 +581,23 @@ img {
     font-size: 1.125rem;
 }
 
+/* Abstract Decorative Shape */
+.abstract-shape {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.shape-1 {
+    bottom: -60px;
+    right: -40px;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, var(--color-turquoise-light), rgba(167, 255, 235, 0.08));
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
 /* =========================================================================
    BACKER TIERS
    ========================================================================= */
@@ -632,6 +649,7 @@ img {
     text-align: center;
     position: relative;
     overflow: hidden;
+    min-height: 0;
 }
 
 .tier-card:hover {
@@ -804,7 +822,7 @@ img {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-.cta-form input:focus {
+.cta-form input:focus-visible {
     border-color: var(--color-turquoise-dark);
     box-shadow: 0 0 0 4px var(--color-turquoise-light);
 }
@@ -860,6 +878,21 @@ img {
     text-align: center;
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.5);
+}
+
+/* =========================================================================
+   ACCESSIBILITY: Focus Styles
+   ========================================================================= */
+
+:focus-visible {
+    outline: 2px solid var(--color-turquoise-dark);
+    outline-offset: 3px;
+}
+
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.btn-primary-nav:focus-visible {
+    box-shadow: 0 0 0 4px var(--color-turquoise-light);
 }
 
 /* =========================================================================
@@ -960,5 +993,42 @@ img {
     .funding-stats {
         flex-direction: column;
         gap: 0;
+    }
+
+    /* iOS Safari: background-attachment: fixed not supported */
+    .philosophy-bg {
+        background-attachment: scroll;
+    }
+}
+
+/* =========================================================================
+   ACCESSIBILITY: Reduced Motion
+   ========================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal,
+    .reveal-up,
+    .reveal-slide-left,
+    .reveal-slide-right {
+        opacity: 1;
+        transform: none;
+    }
+
+    .hero-bg {
+        animation: none;
+        transform: scale(1);
+    }
+
+    .progress-bar-fill {
+        transition: none !important;
     }
 }

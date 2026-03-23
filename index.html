@@ -7,9 +7,21 @@
     <title>Evermor | The Chuck Norris Eternal Archive</title>
     <meta name="description"
         content="Fund the world's first interactive architectural mausoleum dedicated to the legacy of Chuck Norris.">
+    <meta name="theme-color" content="#263238">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Evermor | The Chuck Norris Eternal Archive">
+    <meta property="og:description"
+        content="Fund the world's first interactive, architectural mausoleum dedicated entirely to the life, lessons, and legacy of Chuck Norris.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.evermor.me">
+    <meta property="og:image" content="https://www.evermor.me/hero.png">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💀</text></svg>">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -31,7 +43,7 @@
             <a href="#waitlist" class="btn-primary-nav">Fund the Legend</a>
 
             <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+            <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -62,7 +74,7 @@
             </p>
 
             <!-- NEW: Progress Bar Component -->
-            <div class="funding-tracker">
+            <div id="campaign" class="funding-tracker">
                 <div class="funding-stats">
                     <span class="funds-raised">$2,150,000</span>
                     <span class="funds-goal">raised of $5,000,000 goal</span>
@@ -175,8 +187,7 @@
             <div class="cta-box glassmorphism mx-auto">
                 <h2>The World Needs This Wisdom.</h2>
                 <p>Enter your email to receive direct funding links and join the private backer community.</p>
-                <form class="cta-form"
-                    onsubmit="event.preventDefault(); alert('Redirecting to secure Stripe checkout...');">
+                <form class="cta-form" id="cta-form">
                     <input type="email" placeholder="Enter your email address" required aria-label="Email address">
                     <button type="submit" class="btn-primary">Proceed to Funding</button>
                 </form>
