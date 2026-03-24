@@ -37,19 +37,59 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. CTA Form Submit Handler
     const ctaForm = document.getElementById('cta-form');
+    // TODO: Paste your deployed Google Apps Script Web App URL below
+    const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+
     if (ctaForm) {
         ctaForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const btn = ctaForm.querySelector('button[type="submit"]');
+            const emailInput = ctaForm.querySelector('input[type="email"]');
             const originalText = btn.textContent;
+
+            if (!emailInput || !emailInput.value) return;
+
             btn.textContent = 'Enrolling...';
             btn.disabled = true;
             btn.style.opacity = '0.7';
-            setTimeout(() => {
-                btn.textContent = 'Welcome to the Archive';
-                btn.style.backgroundColor = '#A7FFEB';
-                btn.style.color = '#0A0F12';
-            }, 1000);
+
+            const formData = new FormData();
+            formData.append('email', emailInput.value);
+
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors', // Bypasses CORS issues for simple form submissions
+                body: formData
+            })
+                .then(() => {
+                    btn.textContent = 'Welcome to the Archive';
+                    btn.style.backgroundColor = '#A7FFEB';
+                    btn.style.color = '#0A0F12';
+                    emailInput.value = ''; // clear the input
+
+                    // Reset styling after a few seconds
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.disabled = false;
+                        btn.style.opacity = '1';
+                        btn.style.backgroundColor = '';
+                        btn.style.color = '';
+                    }, 3000);
+                })
+                .catch(error => {
+                    console.error('Waitlist Submission Error:', error);
+                    btn.textContent = 'Error. Try Again.';
+                    btn.style.backgroundColor = '#ff5252';
+                    btn.style.color = '#fff';
+
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.disabled = false;
+                        btn.style.opacity = '1';
+                        btn.style.backgroundColor = '';
+                        btn.style.color = '';
+                    }, 3000);
+                });
         });
     }
 

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" fill="none">
+  <defs>
+    <linearGradient id="eg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#A7FFEB"/>
+    </linearGradient>
+  </defs>
+  <!--
+    EVERMOR E∞ Logo — v6
+    E on the left + proper crossing infinity symbol
+  -->
+  <g stroke="url(#eg)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- === E LETTERFORM === -->
+    <line x1="28" y1="30" x2="28" y2="170"/>
+    <line x1="28" y1="30" x2="100" y2="30"/>
+    <line x1="28" y1="170" x2="100" y2="170"/>
+    <line x1="28" y1="100" x2="165" y2="100"/>
+    
+    <!-- === PROPER INFINITY ∞ === -->
+    <!-- Upper-left to lower-right crossing path -->
+    <path d="
+      M 165,100
+      C 165,52  200,28  240,28
+      C 275,28  295,65  305,100
+      C 315,135  335,172  370,172
+      C 410,172  445,148  445,100
+      C 445,52  410,28  370,28
+      C 335,28  315,65  305,100
+      C 295,135  275,172  240,172
+      C 200,172  165,148  165,100
+      Z
+    "/>
+  </g>
+</svg>

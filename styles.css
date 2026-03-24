@@ -199,6 +199,16 @@ a {
     font-size: 1.5rem;
     letter-spacing: 0.1em;
     color: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    object-fit: contain;
 }
 
 .nav-links {
@@ -263,12 +273,13 @@ a {
     position: relative;
     z-index: 2;
     text-align: center;
-    max-width: 900px;
+    max-width: 960px;
     padding: 0 var(--spacing-md);
+    margin-top: -5vh;
 }
 
 .hero-headline {
-    font-size: clamp(3.5rem, 6vw, 6rem);
+    font-size: clamp(4rem, 8vw, 7.5rem);
     font-weight: 600;
     margin-bottom: 1.5rem;
     line-height: 1.05;
@@ -728,6 +739,20 @@ a {
     font-weight: bold;
 }
 
+.tier-disclaimer {
+    margin-top: 3rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 2rem;
+}
+
 /* Footer */
 .footer {
     border-top: 1px solid var(--glass-border);
@@ -746,6 +771,13 @@ a {
     letter-spacing: 0.1em;
     color: var(--color-mint);
     margin-bottom: 1rem;
+}
+
+.footer-logo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
 }
 
 .footer-brand p {
@@ -904,7 +936,7 @@ a {
     }
 
     .hero-headline {
-        font-size: 2.5rem;
+        font-size: 3.2rem;
     }
 
     .hero-subheadline {
