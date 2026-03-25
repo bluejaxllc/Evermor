@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 4. Advanced 3D Tilt Effect using Vanilla-Tilt
-    VanillaTilt.init(document.querySelectorAll(".bento-card, .tier-card, .experience-card"), {
+    VanillaTilt.init(document.querySelectorAll(".bento-card, .tier-card, .experience-card, .product-card, .audio-narration-card, .cinematic-player"), {
         max: 5,
         speed: 400,
         glare: true,
