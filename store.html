@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evermor Store — Products & Services for Eternal Legacy</title>
+    <meta name="description"
+        content="Browse Evermor's complete catalog of digital legacy products and services. From AI persona recreation to physical time capsules, build your eternal archive.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Evermor Store — Products & Services">
+    <meta property="og:description" content="Browse the complete catalog of digital legacy products and services.">
+    <meta property="og:image" content="assets/og-image.png">
+    <meta property="og:url" content="https://evermor.me/store">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="store.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img src="assets/evermor-logo.svg" alt="Evermor" class="nav-logo-img"></a>
+            <div class="nav-links">
+                <a href="index.html#vision">Vision</a>
+                <a href="index.html#archive">The Archive</a>
+                <a href="store.html" class="active">Store</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <a href="index.html#waitlist" class="btn-primary-nav">Request Access</a>
+
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-nav">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="store.html" class="mobile-link">Store</a>
+        <a href="index.html#contact" class="mobile-link">Contact</a>
+        <a href="index.html#waitlist" class="btn-primary mobile-link mt-auto">Request Access</a>
+    </div>
+
+    <!-- Store Hero -->
+    <section class="store-hero">
+        <div class="container">
+            <div class="store-hero-content">
+                <span class="shift-label">The Marketplace</span>
+                <h1 class="store-hero-title">Evermor <span class="text-shimmer">Store</span></h1>
+                <p class="store-hero-desc">À la carte products, services, and upgrades to build your eternal archive
+                    exactly as you envision it.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Vendors Banner -->
+    <section class="vendors-strip">
+        <div class="container">
+            <div class="vendors-label">Trusted Partners & Vendors</div>
+            <div class="vendors-row">
+                <div class="vendor-chip" data-vendor="evermor"><span class="vendor-dot evermor"></span>Evermor</div>
+                <div class="vendor-chip" data-vendor="eternalstone"><span
+                        class="vendor-dot eternalstone"></span>EternalStone Co.</div>
+                <div class="vendor-chip" data-vendor="memoryvault"><span
+                        class="vendor-dot memoryvault"></span>MemoryVault Labs</div>
+                <div class="vendor-chip" data-vendor="heritage"><span class="vendor-dot heritage"></span>Heritage
+                    Artisans</div>
+                <div class="vendor-chip" data-vendor="chainguard"><span class="vendor-dot chainguard"></span>ChainGuard
+                </div>
+                <div class="vendor-chip" data-vendor="legacystudio"><span
+                        class="vendor-dot legacystudio"></span>LegacyStudio</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filter Bar -->
+    <section class="filter-bar">
+        <div class="container">
+            <div class="filter-row">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="storage">Digital Storage</button>
+                <button class="filter-btn" data-filter="ai">AI & Persona</button>
+                <button class="filter-btn" data-filter="physical">Physical Products</button>
+                <button class="filter-btn" data-filter="mausoleum">Mausoleum Services</button>
+                <button class="filter-btn" data-filter="memorial">Memorial Add-ons</button>
+                <button class="filter-btn" data-filter="legacy">Legacy Services</button>
+                <button class="filter-btn" data-filter="security">Security & Access</button>
+                <button class="filter-btn" data-filter="maintenance">Maintenance</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="store-catalog">
+        <div class="container">
+
+            <!-- ========== DIGITAL STORAGE ========== -->
+            <div class="catalog-category" id="cat-storage">
+                <h2 class="category-title"><span class="cat-icon">💾</span> Digital Storage</h2>
+                <p class="category-desc">Expand your immutable archive with additional blockchain-secured storage
+                    blocks.</p>
+                <div class="product-grid">
+
+                    <div class="product-card" data-category="storage" data-vendor="chainguard">
+                        <div class="product-badge">Popular</div>
+                        <div class="product-icon">📦</div>
+                        <h3 class="product-name">Archive Expansion — 50 GB</h3>
+                        <p class="product-vendor">by <span class="vendor-tag chainguard">ChainGuard</span></p>
+                        <p class="product-desc">Add 50 GB of immutable blockchain storage to your existing archive.
+                            Perfect for expanding photo and document collections.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$29</span>
+                            <span class="product-period">/year</span>
+                        </div>
+                        <button class="product-cta">Add to Archive</button>
+                    </div>
+
+                    <div class="product-card" data-category="storage" data-vendor="chainguard">
+                        <div class="product-icon">📦</div>
+                        <h3 class="product-name">Archive Expansion — 200 GB</h3>
+                        <p class="product-vendor">by <span class="vendor-tag chainguard">ChainGuard</span></p>
+                        <p class="product-desc">200 GB of immutable storage. Ideal for families with extensive video
+                            collections and high-resolution media.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$89</span>
+                            <span class="product-period">/year</span>
+                        </div>
+                        <button class="product-cta">Add to Archive</button>
+                    </div>
+
+                    <div class="product-card" data-category="storage" data-vendor="chainguard">
+                        <div class="product-icon">🗄️</div>
+                        <h3 class="product-name">Archive Expansion — 1 TB</h3>
+                        <p class="product-vendor">by <span class="vendor-tag chainguard">ChainGuard</span></p>
+                        <p class="product-desc">A full terabyte of decentralized storage. For serious archivists
+                            preserving entire lifetimes of media.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$199</span>
+                            <span class="product-period">/year</span>
+                        </div>
+                        <button class="product-cta">Add to Archive</button>
+                    </div>
+
+                    <div class="product-card premium-glow" data-category="storage" data-vendor="chainguard">
+                        <div class="product-badge premium">Elite</div>
+                        <div class="product-icon">♾️</div>
+                        <h3 class="product-name">Infinite Archive</h3>
+                        <p class="product-vendor">by <span class="vendor-tag chainguard">ChainGuard</span></p>
+                        <p class="product-desc">Unlimited blockchain storage. No caps, no limits. Your legacy grows
+                            without constraint — forever.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$499</span>
+                            <span class="product-period">/year</span>
+                        </div>
+                        <button class="product-cta cta-premium">Reserve Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== AI & PERSONA ========== -->
+            <div class="catalog-category" id="cat-ai">
+                <h2 class="category-title"><span class="cat-icon">🤖</span> AI & Persona</h2>
+                <p class="category-desc">Bring your legacy to life with AI-powered voice cloning, persona recreation,
+                    and conversational interaction.</p>
+                <div class="product-grid">
+
+                    <div class="product-card" data-category="ai" data-vendor="memoryvault">
+                        <div class="product-icon">🎙️</div>
+                        <h3 class="product-name">Basic Voice Clone</h3>
+                        <p class="product-vendor">by <span class="vendor-tag memoryvault">MemoryVault Labs</span></p>
+                        <p class="product-desc">A faithful digital clone of your voice from 30+ minutes of recordings.
+                            Your words, preserved in your voice — forever.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$149</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta">Get Started</button>
+                    </div>
+
+                    <div class="product-card" data-category="ai" data-vendor="memoryvault">
+                        <div class="product-badge">Popular</div>
+                        <div class="product-icon">💬</div>
+                        <h3 class="product-name">Advanced Voice + Conversational AI</h3>
+                        <p class="product-vendor">by <span class="vendor-tag memoryvault">MemoryVault Labs</span></p>
+                        <p class="product-desc">Voice clone plus conversational AI trained on your writings,
+                            philosophies, and recorded stories. Your heirs can ask questions and receive responses in
+                            your voice.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$499</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta">Get Started</button>
+                    </div>
+
+                    <div class="product-card premium-glow" data-category="ai" data-vendor="memoryvault">
+                        <div class="product-badge premium">Flagship</div>
+                        <div class="product-icon">🧠</div>
+                        <h3 class="product-name">Full Persona Recreation</h3>
+                        <p class="product-vendor">by <span class="vendor-tag memoryvault">MemoryVault Labs</span></p>
+                        <p class="product-desc">The complete digital you. Deep personality modeling, emotional
+                            responsiveness, memory-aware conversations, and adaptive learning from all uploaded content.
+                        </p>
+                        <div class="product-pricing">
+                            <span class="product-price">$1,499</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta cta-premium">Reserve Now</button>
+                    </div>
+
+                    <div class="product-card" data-category="ai" data-vendor="memoryvault">
+                        <div class="product-icon">🎯</div>
+                        <h3 class="product-name">AI Persona Training Session</h3>
+                        <p class="product-vendor">by <span class="vendor-tag memoryvault">MemoryVault Labs</span></p>
+                        <p class="product-desc">Guided 1-hour session with our AI trainers to refine your persona's
+                            responses, add new memories, or adjust personality parameters.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$79</span>
+                            <span class="product-period">/hour</span>
+                        </div>
+                        <button class="product-cta">Book Session</button>
+                    </div>
+
+                    <div class="product-card" data-category="ai" data-vendor="memoryvault">
+                        <div class="product-icon">🔄</div>
+                        <h3 class="product-name">Annual Persona Maintenance</h3>
+                        <p class="product-vendor">by <span class="vendor-tag memoryvault">MemoryVault Labs</span></p>
+                        <p class="product-desc">Keep your AI persona current with the latest models, security patches,
+                            and performance optimizations. Includes 2 free training sessions per year.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$99</span>
+                            <span class="product-period">/year</span>
+                        </div>
+                        <button class="product-cta">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== PHYSICAL PRODUCTS ========== -->
+            <div class="catalog-category" id="cat-physical">
+                <h2 class="category-title"><span class="cat-icon">📦</span> Physical Products</h2>
+                <p class="category-desc">Tangible artifacts that bridge the physical and digital worlds. Crafted with
+                    premium materials and integrated technology.</p>
+                <div class="product-grid">
+
+                    <div class="product-card" data-category="physical" data-vendor="eternalstone">
+                        <div class="product-icon">🪦</div>
+                        <h3 class="product-name">QR Memorial Plaque — Bronze</h3>
+                        <p class="product-vendor">by <span class="vendor-tag eternalstone">EternalStone Co.</span></p>
+                        <p class="product-desc">Hand-finished bronze plaque with laser-etched QR code linking directly
+                            to a loved one's Evermor archive. Weather-resistant, UV-stable.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$89</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta">Order Now</button>
+                    </div>
+
+                    <div class="product-card" data-category="physical" data-vendor="eternalstone">
+                        <div class="product-badge">Premium</div>
+                        <div class="product-icon">🪦</div>
+                        <h3 class="product-name">QR Memorial Plaque — Titanium</h3>
+                        <p class="product-vendor">by <span class="vendor-tag eternalstone">EternalStone Co.</span></p>
+                        <p class="product-desc">Military-grade titanium plaque with precision-milled QR code. Virtually
+                            indestructible. Rated for 500+ years of outdoor exposure.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$199</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta">Order Now</button>
+                    </div>
+
+                    <div class="product-card" data-category="physical" data-vendor="eternalstone">
+                        <div class="product-icon">📡</div>
+                        <h3 class="product-name">NFC Headstone Marker</h3>
+                        <p class="product-vendor">by <span class="vendor-tag eternalstone">EternalStone Co.</span></p>
+                        <p class="product-desc">Embedded NFC chip in a discreet stone marker. Visitors simply tap their
+                            phone to access the archive — no camera needed.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$149</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta">Order Now</button>
+                    </div>
+
+                    <div class="product-card" data-category="physical" data-vendor="heritage">
+                        <div class="product-icon">🕰️</div>
+                        <h3 class="product-name">Legacy Time Capsule — Small</h3>
+                        <p class="product-vendor">by <span class="vendor-tag heritage">Heritage Artisans</span></p>
+                        <p class="product-desc">Handcrafted stainless steel capsule (6" × 4") with airtight seal.
+                            Includes integrated NFC chip and digital archive link. Holds 5–10 small items.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$249</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta">Order Now</button>
+                    </div>
+
+                    <div class="product-card" data-category="physical" data-vendor="heritage">
+                        <div class="product-badge">Popular</div>
+                        <div class="product-icon">🕰️</div>
+                        <h3 class="product-name">Legacy Time Capsule — Medium</h3>
+                        <p class="product-vendor">by <span class="vendor-tag heritage">Heritage Artisans</span></p>
+                        <p class="product-desc">Premium brushed steel capsule (12" × 8") with museum-grade preservation
+                            lining. Holds photographs, letters, jewelry, and small keepsakes.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$449</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta">Order Now</button>
+                    </div>
+
+                    <div class="product-card" data-category="physical" data-vendor="heritage">
+                        <div class="product-icon">🕰️</div>
+                        <h3 class="product-name">Legacy Time Capsule — Large</h3>
+                        <p class="product-vendor">by <span class="vendor-tag heritage">Heritage Artisans</span></p>
+                        <p class="product-desc">Exhibition-grade capsule (24" × 16") with climate control chamber. For
+                            preserving books, clothing, instruments, and larger heirlooms.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$799</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta">Order Now</button>
+                    </div>
+
+                    <div class="product-card premium-glow" data-category="physical" data-vendor="heritage">
+                        <div class="product-badge premium">Signature</div>
+                        <div class="product-icon">🖤</div>
+                        <h3 class="product-name">Artifact Encasement Unit</h3>
+                        <p class="product-vendor">by <span class="vendor-tag heritage">Heritage Artisans</span></p>
+                        <p class="product-desc">The flagship physical product. Obsidian-black capsule with OLED status
+                            display, integrated NFC, and real-time archive sync. A museum piece for your legacy.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$599</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta cta-premium">Reserve Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== MAUSOLEUM SERVICES ========== -->
+            <div class="catalog-category" id="cat-mausoleum">
+                <h2 class="category-title"><span class="cat-icon">🏛️</span> Mausoleum Services</h2>
+                <p class="category-desc">Commission a bespoke digital — or physical-digital hybrid — mausoleum.
+                    White-glove consultation from concept to completion.</p>
+                <div class="product-grid">
+
+                    <div class="product-card" data-category="mausoleum" data-vendor="evermor">
+                        <div class="product-icon">🖥️</div>
+                        <h3 class="product-name">Digital Mausoleum — Standard</h3>
+                        <p class="product-vendor">by <span class="vendor-tag evermor">Evermor</span></p>
+                        <p class="product-desc">A custom-designed virtual mausoleum space with interactive 3D
+                            walkthrough, media galleries, and integrated archive access for up to 4 individuals.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$2,999</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta">Request Quote</button>
+                    </div>
+
+                    <div class="product-card premium-glow" data-category="mausoleum" data-vendor="evermor">
+                        <div class="product-badge premium">Premium</div>
+                        <div class="product-icon">✨</div>
+                        <h3 class="product-name">Digital Mausoleum — Premium</h3>
+                        <p class="product-vendor">by <span class="vendor-tag evermor">Evermor</span></p>
+                        <p class="product-desc">Full architectural design with photorealistic rendering, VR
+                            compatibility, holographic displays, ambient soundscapes, and AI-guided tours. Up to 12
+                            individuals.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$7,999</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta cta-premium">Request Quote</button>
+                    </div>
+
+                    <div class="product-card" data-category="mausoleum" data-vendor="evermor">
+                        <div class="product-badge">Enterprise</div>
+                        <div class="product-icon">🏗️</div>
+                        <h3 class="product-name">Physical-Digital Hybrid</h3>
+                        <p class="product-vendor">by <span class="vendor-tag evermor">Evermor</span> + <span
+                                class="vendor-tag eternalstone">EternalStone Co.</span></p>
+                        <p class="product-desc">A real-world mausoleum with integrated digital infrastructure — embedded
+                            screens, NFC access points, ambient AI, and climate-controlled artifact chambers.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$14,999</span>
+                            <span class="product-period">starting</span>
+                        </div>
+                        <button class="product-cta">Schedule Consultation</button>
+                    </div>
+
+                    <div class="product-card" data-category="mausoleum" data-vendor="evermor">
+                        <div class="product-icon">👨‍👩‍👧‍👦</div>
+                        <h3 class="product-name">Family Mausoleum — Multi-Generation</h3>
+                        <p class="product-vendor">by <span class="vendor-tag evermor">Evermor</span></p>
+                        <p class="product-desc">A generational monument designed to house the archives of an entire
+                            family lineage. Includes AI family tree navigation and cross-generational story linking.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$24,999</span>
+                            <span class="product-period">starting</span>
+                        </div>
+                        <button class="product-cta">Schedule Consultation</button>
+                    </div>
+
+                    <div class="product-card" data-category="mausoleum" data-vendor="evermor">
+                        <div class="product-icon">🏢</div>
+                        <h3 class="product-name">Corporate & Institutional Memorial</h3>
+                        <p class="product-vendor">by <span class="vendor-tag evermor">Evermor</span></p>
+                        <p class="product-desc">For organizations, churches, fraternities, and communities wanting to
+                            preserve collective history. Custom scope and pricing.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">Custom</span>
+                            <span class="product-period">quote</span>
+                        </div>
+                        <button class="product-cta">Contact Sales</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== MEMORIAL ADD-ONS ========== -->
+            <div class="catalog-category" id="cat-memorial">
+                <h2 class="category-title"><span class="cat-icon">🕯️</span> Memorial Add-ons</h2>
+                <p class="category-desc">Enhance any archive or mausoleum with immersive multimedia experiences and
+                    interactive features.</p>
+                <div class="product-grid">
+
+                    <div class="product-card" data-category="memorial" data-vendor="legacystudio">
+                        <div class="product-icon">🎵</div>
+                        <h3 class="product-name">Custom Memorial Music Composition</h3>
+                        <p class="product-vendor">by <span class="vendor-tag legacystudio">LegacyStudio</span></p>
+                        <p class="product-desc">An original musical composition crafted to reflect the personality and
+                            life story of your loved one. Orchestral, ambient, or any genre.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$299</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta">Commission</button>
+                    </div>
+
+                    <div class="product-card premium-glow" data-category="memorial" data-vendor="memoryvault">
+                        <div class="product-badge premium">Advanced</div>
+                        <div class="product-icon">🌀</div>
+                        <h3 class="product-name">Holographic Display Module</h3>
+                        <p class="product-vendor">by <span class="vendor-tag memoryvault">MemoryVault Labs</span></p>
+                        <p class="product-desc">A self-contained holographic projector that displays rotating 3D
+                            memories, photographs, and messages. Perfect for mausoleum integration.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$1,299</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta cta-premium">Pre-Order</button>
+                    </div>
+
+                    <div class="product-card" data-category="memorial" data-vendor="evermor">
+                        <div class="product-icon">📅</div>
+                        <h3 class="product-name">Interactive Life Timeline</h3>
+                        <p class="product-vendor">by <span class="vendor-tag evermor">Evermor</span></p>
+                        <p class="product-desc">A beautiful, scrollable timeline of a person's life — milestones,
+                            photos, voice clips, and stories — all linked to the main archive.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$199</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta">Add to Archive</button>
+                    </div>
+
+                    <div class="product-card" data-category="memorial" data-vendor="memoryvault">
+                        <div class="product-icon">🌿</div>
+                        <h3 class="product-name">Memorial Garden VR Experience</h3>
+                        <p class="product-vendor">by <span class="vendor-tag memoryvault">MemoryVault Labs</span></p>
+                        <p class="product-desc">A serene virtual reality garden where visitors can walk, sit, and
+                            interact with the archive in a peaceful, immersive environment.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$499</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta">Get Started</button>
+                    </div>
+
+                    <div class="product-card" data-category="memorial" data-vendor="evermor">
+                        <div class="product-icon">🎂</div>
+                        <h3 class="product-name">Annual Memorial Event Hosting</h3>
+                        <p class="product-vendor">by <span class="vendor-tag evermor">Evermor</span></p>
+                        <p class="product-desc">Automated annual memorial events with email invitations, virtual
+                            gathering spaces, and curated memory slideshows for family and friends.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$149</span>
+                            <span class="product-period">/year</span>
+                        </div>
+                        <button class="product-cta">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== LEGACY SERVICES ========== -->
+            <div class="catalog-category" id="cat-legacy">
+                <h2 class="category-title"><span class="cat-icon">✍️</span> Legacy Services</h2>
+                <p class="category-desc">Professional services to capture, digitize, and preserve every facet of a life
+                    story with archival-grade quality.</p>
+                <div class="product-grid">
+
+                    <div class="product-card" data-category="legacy" data-vendor="legacystudio">
+                        <div class="product-badge">Popular</div>
+                        <div class="product-icon">📖</div>
+                        <h3 class="product-name">Professional Biography Writing</h3>
+                        <p class="product-vendor">by <span class="vendor-tag legacystudio">LegacyStudio</span></p>
+                        <p class="product-desc">A professionally written biography based on interviews, personal
+                            documents, and family input. Delivered as a formatted PDF and archived in your vault.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$799</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta">Start Project</button>
+                    </div>
+
+                    <div class="product-card" data-category="legacy" data-vendor="legacystudio">
+                        <div class="product-icon">🎙️</div>
+                        <h3 class="product-name">Voice Recording Session (Studio)</h3>
+                        <p class="product-vendor">by <span class="vendor-tag legacystudio">LegacyStudio</span></p>
+                        <p class="product-desc">A guided studio session to record stories, philosophies, advice, and
+                            messages in broadcast-quality audio. Includes professional editing.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$299</span>
+                            <span class="product-period">/session</span>
+                        </div>
+                        <button class="product-cta">Book Session</button>
+                    </div>
+
+                    <div class="product-card" data-category="legacy" data-vendor="legacystudio">
+                        <div class="product-icon">📸</div>
+                        <h3 class="product-name">Photo & Video Digitization</h3>
+                        <p class="product-vendor">by <span class="vendor-tag legacystudio">LegacyStudio</span></p>
+                        <p class="product-desc">High-resolution scanning and digitization of physical photo albums, home
+                            videos (VHS, 8mm, Super 8), and film negatives.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$149</span>
+                            <span class="product-period">/album</span>
+                        </div>
+                        <button class="product-cta">Ship Materials</button>
+                    </div>
+
+                    <div class="product-card" data-category="legacy" data-vendor="chainguard">
+                        <div class="product-icon">📄</div>
+                        <h3 class="product-name">Document Archival & OCR Processing</h3>
+                        <p class="product-vendor">by <span class="vendor-tag chainguard">ChainGuard</span></p>
+                        <p class="product-desc">Scan, OCR, and blockchain-archive important documents — wills, deeds,
+                            letters, certificates. Fully searchable and tamper-proof.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$99</span>
+                            <span class="product-period">/batch</span>
+                        </div>
+                        <button class="product-cta">Start Archiving</button>
+                    </div>
+
+                    <div class="product-card" data-category="legacy" data-vendor="legacystudio">
+                        <div class="product-icon">🌳</div>
+                        <h3 class="product-name">Family Tree Research & Documentation</h3>
+                        <p class="product-vendor">by <span class="vendor-tag legacystudio">LegacyStudio</span></p>
+                        <p class="product-desc">Professional genealogy research tracing your lineage back 5+
+                            generations. Delivered as an interactive digital family tree integrated with your archive.
+                        </p>
+                        <div class="product-pricing">
+                            <span class="product-price">$499</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta">Start Research</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== SECURITY & ACCESS ========== -->
+            <div class="catalog-category" id="cat-security">
+                <h2 class="category-title"><span class="cat-icon">🔐</span> Security & Access</h2>
+                <p class="category-desc">Advanced access controls, encryption upgrades, and sovereign key management for
+                    your most sensitive data.</p>
+                <div class="product-grid">
+
+                    <div class="product-card" data-category="security" data-vendor="chainguard">
+                        <div class="product-icon">🔑</div>
+                        <h3 class="product-name">Additional Heir Key</h3>
+                        <p class="product-vendor">by <span class="vendor-tag chainguard">ChainGuard</span></p>
+                        <p class="product-desc">Generate an additional sovereign access key for a designated heir. Each
+                            key is cryptographically unique and independently revocable.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$49</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta">Generate Key</button>
+                    </div>
+
+                    <div class="product-card" data-category="security" data-vendor="chainguard">
+                        <div class="product-icon">👁️</div>
+                        <h3 class="product-name">Biometric Access Upgrade</h3>
+                        <p class="product-vendor">by <span class="vendor-tag chainguard">ChainGuard</span></p>
+                        <p class="product-desc">Add fingerprint, facial recognition, or retinal scan as an additional
+                            authentication factor for archive access.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$199</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta">Upgrade</button>
+                    </div>
+
+                    <div class="product-card" data-category="security" data-vendor="chainguard">
+                        <div class="product-icon">🚨</div>
+                        <h3 class="product-name">Emergency Access Protocol</h3>
+                        <p class="product-vendor">by <span class="vendor-tag chainguard">ChainGuard</span></p>
+                        <p class="product-desc">A dead man's switch protocol that releases archive access to designated
+                            contacts if no activity is detected within a configurable timeframe.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$99</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta">Configure</button>
+                    </div>
+
+                    <div class="product-card" data-category="security" data-vendor="chainguard">
+                        <div class="product-icon">🛡️</div>
+                        <h3 class="product-name">Multi-Factor Legacy Verification</h3>
+                        <p class="product-vendor">by <span class="vendor-tag chainguard">ChainGuard</span></p>
+                        <p class="product-desc">Require multiple verification methods (biometric + hardware key +
+                            knowledge factor) before any archive access is granted. Maximum security.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$149</span>
+                            <span class="product-period">one-time</span>
+                        </div>
+                        <button class="product-cta">Enable</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== MAINTENANCE & SUPPORT ========== -->
+            <div class="catalog-category" id="cat-maintenance">
+                <h2 class="category-title"><span class="cat-icon">🛠️</span> Maintenance & Support</h2>
+                <p class="category-desc">Keep your archive running flawlessly with proactive monitoring, insurance, and
+                    dedicated support.</p>
+                <div class="product-grid">
+
+                    <div class="product-card" data-category="maintenance" data-vendor="evermor">
+                        <div class="product-icon">🩺</div>
+                        <h3 class="product-name">Annual Archive Health Check</h3>
+                        <p class="product-vendor">by <span class="vendor-tag evermor">Evermor</span></p>
+                        <p class="product-desc">Comprehensive audit of your archive's data integrity, storage
+                            utilization, access logs, and security posture. Detailed report with recommendations.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$49</span>
+                            <span class="product-period">/year</span>
+                        </div>
+                        <button class="product-cta">Subscribe</button>
+                    </div>
+
+                    <div class="product-card" data-category="maintenance" data-vendor="chainguard">
+                        <div class="product-icon">🛡️</div>
+                        <h3 class="product-name">Data Migration Insurance</h3>
+                        <p class="product-vendor">by <span class="vendor-tag chainguard">ChainGuard</span></p>
+                        <p class="product-desc">If blockchain technology evolves, we guarantee seamless migration of
+                            your entire archive to next-generation storage at no additional cost.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$99</span>
+                            <span class="product-period">/year</span>
+                        </div>
+                        <button class="product-cta">Subscribe</button>
+                    </div>
+
+                    <div class="product-card" data-category="maintenance" data-vendor="evermor">
+                        <div class="product-badge">Popular</div>
+                        <div class="product-icon">⚡</div>
+                        <h3 class="product-name">Priority Support Plan</h3>
+                        <p class="product-vendor">by <span class="vendor-tag evermor">Evermor</span></p>
+                        <p class="product-desc">Skip the queue. 24/7 priority access to our support team with guaranteed
+                            2-hour response times. Includes dedicated account manager.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$199</span>
+                            <span class="product-period">/year</span>
+                        </div>
+                        <button class="product-cta">Subscribe</button>
+                    </div>
+
+                    <div class="product-card premium-glow" data-category="maintenance" data-vendor="evermor">
+                        <div class="product-badge premium">VIP</div>
+                        <div class="product-icon">🤵</div>
+                        <h3 class="product-name">White-Glove Concierge Service</h3>
+                        <p class="product-vendor">by <span class="vendor-tag evermor">Evermor</span></p>
+                        <p class="product-desc">A personal concierge handles everything — uploads, organization,
+                            training sessions, family coordination. You focus on living; we handle the legacy.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">$999</span>
+                            <span class="product-period">/year</span>
+                        </div>
+                        <button class="product-cta cta-premium">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Store CTA -->
+    <section class="store-bottom-cta">
+        <div class="container">
+            <div class="glassmorphism">
+                <h2>Can't find what you need?</h2>
+                <p>Our team specializes in bespoke legacy solutions. Tell us your vision and we'll make it real.</p>
+                <a href="mailto:hello@evermor.me?subject=Custom%20Store%20Inquiry"
+                    class="btn-primary btn-magnetic">Contact Our Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/evermor-logo.svg" alt="Evermor"
+                        style="height:40px; margin-bottom:1rem; filter: drop-shadow(0 0 8px rgba(0,229,255,0.3));">
+                    <p>The world's first digital mausoleum. Preserving legacies with immutable fidelity.</p>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Product</h4>
+                    <a href="index.html#archive">The Archive</a>
+                    <a href="index.html#tiers">Pricing</a>
+                    <a href="store.html">Store</a>
+                    <a href="index.html#gallery">Gallery</a>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Company</h4>
+                    <a href="index.html#vision">Our Vision</a>
+                    <a href="index.html#philosophy">Philosophy</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Data Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Evermor. All rights reserved. Built for eternity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="store.js"></script>
+</body>
+
+</html>

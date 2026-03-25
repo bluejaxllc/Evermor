@@ -1,6 +1,5 @@
 {
-    "name": "evermor",
-    "scripts": {
-        "start": "npx serve . -l tcp://0.0.0.0:$PORT"
-    }
+  "dependencies": {
+    "axios": "^1.13.6"
+  }
 }

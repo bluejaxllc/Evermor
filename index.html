@@ -4,24 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evermor | The Eternal Archive — Preserve Your Legacy Forever</title>
+    <title>Evermor — The Eternal Archive | Digital Legacy Preservation</title>
     <meta name="description"
-        content="Evermor is the world's first digital mausoleum. Preserve your legacy with immutable blockchain storage, military-grade encryption, and generational access for your heirs.">
-    <meta property="og:title" content="Evermor | The Eternal Archive">
-    <meta property="og:description"
-        content="A digital mausoleum for the modern age. Preserve your legacy with immutable fidelity.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://evermor.me">
-    <meta property="og:image" content="assets/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Evermor | The Eternal Archive">
-    <meta name="twitter:description"
-        content="A digital mausoleum for the modern age. Preserve your legacy with immutable fidelity.">
-    <meta name="twitter:image" content="assets/og-image.png">
+        content="Evermor is the world's first digital mausoleum — preserving your legacy with immutable blockchain storage. Voice recordings, photographs, life philosophies, and AI persona recreation for future generations.">
+    <meta name="keywords"
+        content="digital legacy, digital mausoleum, blockchain storage, legacy preservation, digital archive, memorial, voice recording, AI persona">
+    <meta name="author" content="Evermor">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/favicon.png">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Evermor — The Eternal Archive">
+    <meta property="og:description"
+        content="The world's first digital mausoleum. Preserve your legacy with immutable blockchain storage for future generations.">
+    <meta property="og:image" content="assets/og-image.png">
+    <meta property="og:url" content="https://evermor.me">
+    <meta property="og:site_name" content="Evermor">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Evermor — The Eternal Archive">
+    <meta name="twitter:description"
+        content="The world's first digital mausoleum. Preserve your legacy with immutable blockchain storage.">
+    <meta name="twitter:image" content="assets/og-image.png">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -31,15 +41,27 @@
 </head>
 
 <body>
+    <!-- Premium Pre-loader -->
+    <div id="loader" class="preloader">
+        <div class="loader-content">
+            <img src="assets/evermor-logo.svg" alt="Evermor" class="loader-logo-img">
+            <div class="loader-bar-container">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo"><img src="assets/favicon.png" alt="Evermor" class="logo-icon">EVERMOR</a>
+            <a href="#" class="logo"><img src="assets/evermor-logo.svg" alt="Evermor" class="nav-logo-img"></a>
             <div class="nav-links">
                 <a href="#vision">Vision</a>
-                <a href="#architecture">Architecture</a>
-                <a href="#lineage">Timeline</a>
+                <a href="#archive">The Archive</a>
+                <a href="#gallery">Gallery</a>
+                <a href="store.html">Store</a>
                 <a href="#tiers">Pricing</a>
+                <a href="#contact">Contact</a>
             </div>
             <a href="#waitlist" class="btn-primary-nav">Request Access</a>
 
@@ -54,15 +76,39 @@
     <!-- Mobile Nav -->
     <div class="mobile-nav">
         <a href="#vision" class="mobile-link">Vision</a>
-        <a href="#architecture" class="mobile-link">Architecture</a>
-        <a href="#lineage" class="mobile-link">Timeline</a>
+        <a href="#archive" class="mobile-link">The Archive</a>
+        <a href="#gallery" class="mobile-link">Gallery</a>
+        <a href="store.html" class="mobile-link">Store</a>
         <a href="#tiers" class="mobile-link">Pricing</a>
+        <a href="#contact" class="mobile-link">Contact</a>
         <a href="#waitlist" class="btn-primary mobile-link mt-auto">Request Access</a>
     </div>
+
+    <!-- Hero Video Section -->
+    <section id="hero-video" class="hero-video-section">
+        <div class="container">
+            <div class="video-wrapper reveal-up">
+                <!-- Replace src with your video URL or YouTube embed -->
+                <div class="video-placeholder">
+                    <div class="video-placeholder-content">
+                        <div class="play-icon">▶</div>
+                        <h3>Introducing Evermor</h3>
+                        <p>The future of legacy preservation</p>
+                    </div>
+                </div>
+                <!-- Uncomment when video is ready:
+                <video autoplay muted loop playsinline poster="assets/hero_bg.png">
+                    <source src="assets/evermor_intro.mp4" type="video/mp4">
+                </video>
+                -->
+            </div>
+        </div>
+    </section>
 
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-bg"></div>
+        <div id="tsparticles"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content reveal-up">
             <h1 class="hero-headline">The Eternal Archive</h1>
@@ -114,6 +160,210 @@
                         <p>Grant access to descendants, offering them an interactive, sovereign window into your mind.
                         </p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Why – The Heart Behind Evermor -->
+    <section id="mission" class="section mission-section">
+        <div class="container">
+            <div class="mission-layout reveal-up">
+                <div class="mission-text">
+                    <span class="shift-label">Our Why</span>
+                    <h2 class="shift-title">More Than a <span class="text-shimmer">Headstone</span></h2>
+                    <div class="shift-divider turquoise-bg"></div>
+                    <p class="mission-paragraph">
+                        We love people. Deeply. And we believe that when someone passes, they deserve more than a slab
+                        of stone with a name and two dates. That headstone tells you nothing about who they were — their
+                        dreams, their struggles, the wisdom they earned through a lifetime of living.
+                    </p>
+                    <p class="mission-paragraph">
+                        Evermor was born from a simple, unshakeable conviction: <strong>every human life is a story
+                            worth preserving</strong>. Not just for the people who knew them, but for the generations
+                        who will never get the chance.
+                    </p>
+                    <p class="mission-paragraph accent-text">
+                        We're not building a product. We're building a new form of reverence.
+                    </p>
+                </div>
+                <div class="mission-visual">
+                    <div class="mission-quote-card">
+                        <div class="glow-border"></div>
+                        <div class="bento-content">
+                            <div class="quote-icon">"</div>
+                            <blockquote>
+                                My great-grandfather built ships. That's all I know. People say "he was this tall" or
+                                "he used to do that." But I can't hear his voice. I can't know his stories. I can't
+                                learn from his life.<br><br>
+                                <strong>What if I could?</strong>
+                            </blockquote>
+                            <p class="quote-attribution">— The vision that started it all</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Archive – Reimagining the Experience -->
+    <section id="archive" class="section">
+        <div class="container">
+            <div class="text-center mb-xl reveal-up">
+                <span class="shift-label">The Archive</span>
+                <h2 class="shift-title">A Graveyard <span class="text-shimmer">Reimagined</span></h2>
+                <div class="shift-divider mx-auto turquoise-bg"></div>
+                <p class="section-desc mx-auto">Imagine walking into a place where the dead are not forgotten — they are
+                    <em>experienced</em>. Not a place of mourning, but a sanctuary of lived knowledge.
+                </p>
+            </div>
+
+            <div class="experience-grid">
+                <div class="experience-card reveal-slide-left">
+                    <div class="glow-border"></div>
+                    <div class="bento-content">
+                        <div class="experience-icon">🗿</div>
+                        <h3>See Them</h3>
+                        <p>Not just a photograph on a wall. A faithful, lifelike recreation — see your ancestor exactly
+                            as they were. Their face. Their posture. The way they held themselves. Presence, preserved.
+                        </p>
+                    </div>
+                </div>
+                <div class="experience-card reveal-up delay-1">
+                    <div class="glow-border"></div>
+                    <div class="bento-content">
+                        <div class="experience-icon">🎙️</div>
+                        <h3>Hear Them</h3>
+                        <p>Their voice. Their stories. The lessons they wanted to pass down. Hear your great-grandmother
+                            tell you about the hardest winter she survived, or the moment she knew what mattered most.
+                        </p>
+                    </div>
+                </div>
+                <div class="experience-card reveal-slide-right delay-2">
+                    <div class="glow-border"></div>
+                    <div class="bento-content">
+                        <div class="experience-icon">💡</div>
+                        <h3>Learn From Them</h3>
+                        <p>Their struggles. Their breakthroughs. The quiet wisdom earned through decades of living.
+                            Every grave holds a library of knowledge that the modern world simply throws away.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-callout reveal-up">
+                <div class="glow-border"></div>
+                <div class="bento-content text-center">
+                    <p class="callout-text">A single graveyard holds <strong>hundreds, if not thousands</strong> of
+                        lifetimes of knowledge, love, and lessons. Today, we step over them. With Evermor, we <em>step
+                            into them</em>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Examples Gallery -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="text-center mb-xl reveal-up">
+                <span class="shift-label">Features in Action</span>
+                <h2 class="shift-title">See the <span class="text-shimmer">Vision</span></h2>
+                <div class="shift-divider mx-auto turquoise-bg"></div>
+                <p class="section-desc mx-auto">From QR-linked headstones to futuristic mausoleums, here's how Evermor
+                    brings legacy preservation to life.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-card reveal-up">
+                    <div class="glow-border"></div>
+                    <div class="gallery-image">
+                        <img src="assets/qr_headstone.png" alt="Phone scanning QR code on a headstone" loading="lazy">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>QR-Linked Memorials</h4>
+                        <p>Scan any headstone to instantly access a loved one's complete digital archive — voice
+                            recordings, photographs, life lessons, and more.</p>
+                    </div>
+                </div>
+                <div class="gallery-card reveal-up delay-1">
+                    <div class="glow-border"></div>
+                    <div class="gallery-image">
+                        <img src="assets/modern_mausoleum.png" alt="Modern futuristic mausoleum" loading="lazy">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>The Modern Mausoleum</h4>
+                        <p>A vision of what legacy architecture becomes when paired with immutable technology — glass,
+                            light, and data woven into eternity.</p>
+                    </div>
+                </div>
+                <div class="gallery-card reveal-up delay-2">
+                    <div class="glow-border"></div>
+                    <div class="gallery-image">
+                        <img src="assets/traditional_mausoleum.png" alt="Traditional classical mausoleum"
+                            loading="lazy">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Classical Heritage</h4>
+                        <p>Evermor honors tradition. Even the most classical mausoleum can be digitally enhanced — the
+                            reverence stays, the technology elevates.</p>
+                    </div>
+                </div>
+                <div class="gallery-card reveal-up delay-1">
+                    <div class="glow-border"></div>
+                    <div class="gallery-image">
+                        <img src="assets/artifact_encasement.png" alt="Luxury artifact encasement device"
+                            loading="lazy">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Artifact Encasement</h4>
+                        <p>A physical-digital capsule that preserves your most treasured items alongside their digitized
+                            counterparts. Tangible meets immutable.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="section philosophy-section">
+        <div class="container">
+            <div class="text-center mb-xl reveal-up">
+                <span class="shift-label">Our Philosophy</span>
+                <h2 class="shift-title">The Dead Are Not <span class="text-shimmer">Gone</span></h2>
+                <div class="shift-divider mx-auto turquoise-bg"></div>
+            </div>
+
+            <div class="philosophy-grid">
+                <div class="philosophy-card reveal-slide-left">
+                    <div class="glow-border"></div>
+                    <div class="bento-content">
+                        <h3>More Than Mourning</h3>
+                        <p>We've been taught that a graveyard is a place of sadness — a creepy place, a boring place, a
+                            place with nice grass and nice trees and nothing more. We reject that entirely.</p>
+                        <p>These are places that hold the most valuable resource humanity has ever had: <strong>the
+                                lived experience of those who came before us.</strong></p>
+                    </div>
+                </div>
+                <div class="philosophy-card reveal-slide-right delay-1">
+                    <div class="glow-border"></div>
+                    <div class="bento-content">
+                        <h3>A Treasured Resource</h3>
+                        <p>Every person who has lived holds knowledge, love, passion, and hard-won lessons that we can
+                            benefit from. Their real-life experiences — true, honest, deeply human — are a gift to the
+                            world.</p>
+                        <p>Evermor transforms resting places into <strong>living archives</strong> where future
+                            generations don't just remember the dead. They <em>benefit</em> from them.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="philosophy-statement reveal-up">
+                <div class="glow-border"></div>
+                <div class="bento-content text-center">
+                    <h3 class="statement-headline">We believe this with our whole hearts.</h3>
+                    <p class="statement-text">As a people of this world, we will benefit from honoring those who came
+                        before us — not with silence and stone, but with their voices, their wisdom, and the full truth
+                        of their lives.</p>
+                    <a href="#waitlist" class="btn-primary btn-magnetic">Join This Movement</a>
                 </div>
             </div>
         </div>
@@ -212,13 +462,15 @@
         </div>
     </section>
 
-    <!-- Interactive Tiers Section -->
+    <!-- Pricing Tiers Section -->
     <section id="tiers" class="section">
         <div class="container">
             <div class="text-center mb-xl reveal-up">
                 <span class="shift-label">Reserving the Future</span>
-                <h2 class="shift-title">Secure Your Archive</h2>
+                <h2 class="shift-title">Secure Your <span class="text-shimmer">Archive</span></h2>
                 <div class="shift-divider mx-auto turquoise-bg"></div>
+                <p class="section-desc mx-auto">Early access tiers for visionaries ready to preserve their legacy with
+                    the most advanced digital archival technology ever built.</p>
             </div>
 
             <div class="tier-grid">
@@ -233,6 +485,7 @@
                             <li>1TB Immutable Blockchain Storage</li>
                             <li>Standard Multi-Sig Heir Release</li>
                             <li>Basic AI Taxonomy Mapping</li>
+                            <li>Personal Legacy Dashboard</li>
                         </ul>
                         <a href="#waitlist" class="btn-secondary w-full btn-magnetic">Reserve Architect</a>
                     </div>
@@ -245,12 +498,13 @@
                         <h4>The Digital Mausoleum</h4>
                         <div class="tier-price">$1,000<span class="tier-period">/setup</span></div>
                         <p>The complete generational package. Interactive AI legacy representation and biometric
-                            dead-man's-switch triggers.</p>
+                            dead-man’s-switch triggers.</p>
                         <ul class="tier-features">
                             <li>5TB Immutable Storage</li>
                             <li>Interactive AI Persona Recreation</li>
                             <li>Biometric Oracle Triggers</li>
                             <li>White-Glove Legal Constitution Integration</li>
+                            <li>Priority Voice & Story Recording Session</li>
                         </ul>
                         <a href="#waitlist" class="btn-primary w-full btn-magnetic">Reserve Sovereign</a>
                     </div>
@@ -262,25 +516,187 @@
         </div>
     </section>
 
-    <!-- Social Proof Stats -->
-    <section class="section stats-section">
+    <!-- Store Preview Section -->
+    <section id="store" class="section">
         <div class="container">
-            <div class="stats-grid reveal-up">
-                <div class="stat-item">
-                    <div class="stat-number" data-target="2847">0</div>
-                    <div class="stat-label">Waitlist Members</div>
+            <div class="text-center mb-xl reveal-up">
+                <span class="shift-label">Coming Soon</span>
+                <h2 class="shift-title">The Evermor <span class="text-shimmer">Store</span></h2>
+                <div class="shift-divider mx-auto turquoise-bg"></div>
+                <p class="section-desc mx-auto">À la carte add-ons and premium upgrades to customize your eternal
+                    archive exactly as you envision it.</p>
+            </div>
+
+            <div class="store-grid">
+                <div class="store-card reveal-up">
+                    <div class="glow-border"></div>
+                    <div class="bento-content text-center">
+                        <div class="store-icon">💾</div>
+                        <h4>Extra Storage</h4>
+                        <p>Expand your archive with additional immutable blockchain storage blocks.</p>
+                        <span class="store-badge">Coming Soon</span>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="256">0</div>
-                    <div class="stat-label">Bit Encryption</div>
+                <div class="store-card reveal-up delay-1">
+                    <div class="glow-border"></div>
+                    <div class="bento-content text-center">
+                        <div class="store-icon">🤖</div>
+                        <h4>AI Persona Upgrade</h4>
+                        <p>Enhanced AI persona recreation with voice cloning and conversational depth.</p>
+                        <span class="store-badge">Coming Soon</span>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="99">0</div>
-                    <div class="stat-label">% Uptime SLA</div>
+                <div class="store-card reveal-up delay-2">
+                    <div class="glow-border"></div>
+                    <div class="bento-content text-center">
+                        <div class="store-icon">📦</div>
+                        <h4>Physical Capsule</h4>
+                        <p>Premium artifact encasement with integrated NFC chip and digital archive link.</p>
+                        <span class="store-badge">Coming Soon</span>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="100">0</div>
-                    <div class="stat-label">Year Archive Guarantee</div>
+                <div class="store-card reveal-up delay-1">
+                    <div class="glow-border"></div>
+                    <div class="bento-content text-center">
+                        <div class="store-icon">🏛️</div>
+                        <h4>Custom Mausoleum</h4>
+                        <p>Commission a bespoke digital mausoleum design with white-glove consultation.</p>
+                        <span class="store-badge">Coming Soon</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center reveal-up" style="margin-top: 3rem;">
+                <a href="#waitlist" class="btn-primary btn-magnetic">Get Notified at Launch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Consultation Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="text-center mb-xl reveal-up">
+                <span class="shift-label">Get in Touch</span>
+                <h2 class="shift-title">Book a <span class="text-shimmer">Consultation</span></h2>
+                <div class="shift-divider mx-auto turquoise-bg"></div>
+                <p class="section-desc mx-auto">Ready to discuss a custom mausoleum, upgrade your archive, or learn more
+                    about what Evermor can do? We'd love to talk.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card reveal-slide-left">
+                    <div class="glow-border"></div>
+                    <div class="bento-content text-center">
+                        <div class="contact-icon">✉️</div>
+                        <h4>Email Us</h4>
+                        <p>For general inquiries and partnership opportunities.</p>
+                        <a href="mailto:hello@evermor.me" class="contact-link">hello@evermor.me</a>
+                    </div>
+                </div>
+                <div class="contact-card reveal-up delay-1">
+                    <div class="glow-border"></div>
+                    <div class="bento-content text-center">
+                        <div class="contact-icon">🏛️</div>
+                        <h4>Custom Mausoleum</h4>
+                        <p>Want to build something truly unique? Let's design your eternal space together.</p>
+                        <a href="mailto:hello@evermor.me?subject=Custom%20Mausoleum%20Inquiry"
+                            class="contact-link">Request Consultation</a>
+                    </div>
+                </div>
+                <div class="contact-card reveal-slide-right delay-2">
+                    <div class="glow-border"></div>
+                    <div class="bento-content text-center">
+                        <div class="contact-icon">⬆️</div>
+                        <h4>Upgrade Your Plan</h4>
+                        <p>Already on the waitlist? Reach out to discuss upgrading your archive tier.</p>
+                        <a href="mailto:hello@evermor.me?subject=Upgrade%20Inquiry" class="contact-link">Discuss
+                            Upgrade</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="text-center mb-xl reveal-up">
+                <span class="shift-label">Questions?</span>
+                <h2 class="shift-title">Frequently <span class="text-shimmer">Asked</span></h2>
+                <div class="shift-divider mx-auto turquoise-bg"></div>
+            </div>
+
+            <div class="faq-container reveal-up">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What exactly is Evermor?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Evermor is the world's first digital mausoleum — a platform that preserves your complete
+                            legacy (voice recordings, photographs, life philosophies, vital records) using immutable
+                            blockchain storage. Future generations can access and interact with your preserved identity.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How is my data protected?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Your data is encrypted with military-grade 256-bit AES encryption before being sharded and
+                            distributed across a decentralized blockchain network. No single entity — not even Evermor —
+                            can access, alter, or delete your archive. Only you and your designated heirs hold the
+                            sovereign keys.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How do my heirs access the archive?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Access is transferred through smart contracts with configurable triggers — including
+                            biometric verification, vital sign monitors, or a predefined date. When triggered, private
+                            keys are securely released to your designated heirs, granting them full access to your
+                            archive.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What is the AI Persona Recreation?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Available in the Sovereign Heir tier, AI Persona Recreation creates an interactive digital
+                            representation of you based on your uploaded voice recordings, philosophies, and life
+                            stories. Your descendants can have conversational experiences that capture your personality
+                            and wisdom.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Are prices and features final?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. Evermor is actively evolving. All pricing, storage allocations, and features are subject
+                            to change as we grow. What you see today is our founding vision — a foundation that will
+                            adapt based on market conditions, technological advancements, and community feedback. Early
+                            adopters will always receive preferential treatment.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Can I build a custom mausoleum?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. We offer white-glove consultation for individuals, families, and organizations
+                            wanting to commission a bespoke digital — or physical-digital hybrid — mausoleum. <a
+                                href="#contact">Contact us</a> to start the conversation.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -306,20 +722,16 @@
     <footer class="footer section">
         <div class="container footer-grid">
             <div class="footer-brand">
-                <img src="assets/evermor_logo_full.png" alt="Evermor" class="footer-logo">
+                <h2>EVERMOR</h2>
                 <p>The Ultimate Digital Mausoleum.</p>
                 <p>&copy; 2026 Evermor Inc. All rights reserved.</p>
             </div>
             <div class="footer-links">
                 <h4>Platform</h4>
-                <a href="#vision">Vision</a>
+                <a href="#mission">Our Mission</a>
+                <a href="#archive">The Archive</a>
+                <a href="#philosophy">Philosophy</a>
                 <a href="#architecture">Architecture</a>
-                <a href="#lineage">Timeline</a>
-            </div>
-            <div class="footer-links">
-                <h4>Campaigns</h4>
-                <a href="/chucknorris/">The Chuck Norris Eternal Archive</a>
-                <a href="#tiers">Pricing</a>
             </div>
             <div class="footer-links">
                 <h4>Legal</h4>
@@ -330,6 +742,9 @@
         </div>
     </footer>
 
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.0.6/tsparticles.slim.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
     <script src="script.js"></script>
 </body>
 

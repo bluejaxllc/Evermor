@@ -2,6 +2,20 @@
  * Official Evermor Landing Page Interactions
  */
 
+// 0. Pre-loader Engine
+window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    if (loader) {
+        // Enforce a minimum display time of 500ms so the user sees the cool animation
+        setTimeout(() => {
+            loader.classList.add('fade-out');
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 800); // Matches CSS transition duration
+        }, 500);
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Navbar Scroll Effect
@@ -14,6 +28,27 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('scrolled');
         }
     }, { passive: true });
+
+    // 1b. Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileNav = document.querySelector('.mobile-nav');
+
+    if (mobileMenuBtn && mobileNav) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close mobile nav when a link is clicked
+        mobileNav.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
 
     // 2. Scroll Reveal Animations (Intersection Observer)
     const revealElements = document.querySelectorAll('.reveal-up, .reveal-slide-left, .reveal-slide-right');
@@ -58,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             fetch(GOOGLE_SCRIPT_URL, {
                 method: 'POST',
-                mode: 'no-cors', // Bypasses CORS issues for simple form submissions
+                mode: 'no-cors', // Bypasses CORS issues
                 body: formData
             })
                 .then(() => {
@@ -67,7 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.style.color = '#0A0F12';
                     emailInput.value = ''; // clear the input
 
-                    // Reset styling after a few seconds
                     setTimeout(() => {
                         btn.textContent = originalText;
                         btn.disabled = false;
@@ -93,31 +127,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Advanced 3D Tilt Effect on Bento Cards
-    const bentoCards = document.querySelectorAll('.bento-card');
-    bentoCards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-
-            const rotateX = ((y - centerY) / centerY) * -5;
-            const rotateY = ((x - centerX) / centerX) * 5;
-
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
-        });
-
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)`;
-            card.style.transition = 'transform 0.5s ease-out, border-color 0.5s, box-shadow 0.5s';
-        });
-
-        card.addEventListener('mouseenter', () => {
-            card.style.transition = 'border-color 0.5s, box-shadow 0.5s';
-        });
+    // 4. Advanced 3D Tilt Effect using Vanilla-Tilt
+    VanillaTilt.init(document.querySelectorAll(".bento-card, .tier-card, .experience-card"), {
+        max: 5,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.05,
+        scale: 1.02
     });
 
     // 5. Cursor-Following Glow Orb
@@ -137,9 +153,10 @@ document.addEventListener('DOMContentLoaded', () => {
         cursorOrb.style.top = `${e.clientY}px`;
     });
 
-    // 6. Magnetic Buttons
+    // 6. Magnetic Buttons Enhancement
     const magneticBtns = document.querySelectorAll('.btn-magnetic');
     magneticBtns.forEach(btn => {
+        btn.classList.add('magnetic');
         btn.addEventListener('mousemove', (e) => {
             const rect = btn.getBoundingClientRect();
             const x = e.clientX - rect.left - rect.width / 2;
@@ -152,49 +169,98 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 7. Mobile Menu Toggle
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const mobileNav = document.querySelector('.mobile-nav');
-    if (mobileMenuBtn && mobileNav) {
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenuBtn.classList.toggle('active');
-            mobileNav.classList.toggle('active');
-            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+    // 7. Custom WebGL-style Cursor (desktop only — disabled on touch/mobile)
+    const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (window.innerWidth <= 1024);
+
+    if (!isTouchDevice) {
+        const cursorDot = document.createElement('div');
+        cursorDot.classList.add('cursor-dot');
+        document.body.appendChild(cursorDot);
+
+        const cursorOutline = document.createElement('div');
+        cursorOutline.classList.add('cursor-outline');
+        document.body.appendChild(cursorOutline);
+
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            // Slight delay on the outline for smoothness
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: "forwards" });
         });
-        mobileNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenuBtn.classList.remove('active');
-                mobileNav.classList.remove('active');
-                document.body.style.overflow = '';
-            });
+
+        // Hover State for Cursor
+        const hoverElements = document.querySelectorAll('a, button, input, .bento-card');
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', () => document.documentElement.classList.add('cursor-hover'));
+            el.addEventListener('mouseleave', () => document.documentElement.classList.remove('cursor-hover'));
         });
     }
 
-    // 8. Animated Stat Counters
-    const statNumbers = document.querySelectorAll('.stat-number[data-target]');
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            const el = entry.target;
-            const target = parseInt(el.getAttribute('data-target'));
-            const duration = 2000;
-            const startTime = performance.now();
-
-            function updateCounter(currentTime) {
-                const elapsed = currentTime - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 3);
-                el.textContent = Math.floor(eased * target).toLocaleString();
-                if (progress < 1) requestAnimationFrame(updateCounter);
-            }
-            requestAnimationFrame(updateCounter);
-            counterObserver.unobserve(el);
+    // 8. Immersive Digital Dust (tsParticles)
+    if (typeof tsParticles !== 'undefined') {
+        tsParticles.load("tsparticles", {
+            fpsLimit: 60,
+            particles: {
+                color: { value: "#00E5FF" },
+                links: { enable: false },
+                move: {
+                    enable: true,
+                    speed: 0.6,
+                    direction: "top",
+                    random: true,
+                    straight: false,
+                    outModes: { default: "out" }
+                },
+                number: {
+                    density: { enable: true, area: 800 },
+                    value: 100
+                },
+                opacity: {
+                    value: { min: 0.1, max: 0.8 },
+                    animation: { enable: true, speed: 1, minimumValue: 0.1 }
+                },
+                size: {
+                    value: { min: 1, max: 3 },
+                    animation: { enable: true, speed: 2, minimumValue: 0.5 }
+                }
+            },
+            interactivity: {
+                events: {
+                    onHover: { enable: true, mode: "slow" },
+                    resize: true
+                },
+                modes: {
+                    slow: { radius: 100, factor: 3 }
+                }
+            },
+            detectRetina: true
         });
-    }, { threshold: 0.5 });
+    }
+    // 9. FAQ Accordion Toggle
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if (question) {
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                // Close all other items
+                faqItems.forEach(other => other.classList.remove('active'));
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        }
+    });
 
-    statNumbers.forEach(el => counterObserver.observe(el));
-
-    // 9. Smooth Scroll for Anchor Links
+    // 10. Smooth Scroll for Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {
             const targetId = anchor.getAttribute('href');
