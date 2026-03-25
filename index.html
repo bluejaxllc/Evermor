@@ -88,19 +88,32 @@
     <section id="hero-video" class="hero-video-section">
         <div class="container">
             <div class="video-wrapper reveal-up">
-                <!-- Replace src with your video URL or YouTube embed -->
-                <div class="video-placeholder">
-                    <div class="video-placeholder-content">
-                        <div class="play-icon">▶</div>
-                        <h3>Introducing Evermor</h3>
-                        <p>The future of legacy preservation</p>
+                <div class="cinematic-player">
+                    <img src="assets/hero_bg.png" alt="Evermor Cinematic Intro" class="video-poster">
+                    <div class="video-overlay-gradient"></div>
+
+                    <button class="btn-play-massive pulse-animation">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </button>
+
+                    <div class="glass-controls">
+                        <button class="control-btn"><svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z" />
+                            </svg></button>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                        <span class="time-display">00:00 / 02:45</span>
+                        <button class="control-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 002-2v-4M17 8l-5-5-5 5M12 3v12" />
+                            </svg></button>
                     </div>
                 </div>
-                <!-- Uncomment when video is ready:
-                <video autoplay muted loop playsinline poster="assets/hero_bg.png">
-                    <source src="assets/evermor_intro.mp4" type="video/mp4">
-                </video>
-                -->
             </div>
         </div>
     </section>
@@ -130,6 +143,29 @@
                 <div class="shift-divider mx-auto turquoise-bg"></div>
                 <p class="section-desc mx-auto">Social media captures fragments. Evermor captures the essence. We are
                     moving from temporary digital renting to permanent legacy ownership.</p>
+
+                <!-- Audio Narration Player -->
+                <div class="audio-narration-card mx-auto mt-6">
+                    <div class="audio-avatar">
+                        <img src="assets/favicon.png" alt="Founder" class="audio-avatar-img">
+                        <div class="audio-status-dot"></div>
+                    </div>
+                    <div class="audio-details">
+                        <h4>The Evermor Mission</h4>
+                        <span class="audio-subtitle">A message from the Founder</span>
+                    </div>
+                    <button class="btn-play-audio">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </button>
+                    <div class="audio-waveform">
+                        <span class="wave w1"></span><span class="wave w2"></span><span class="wave w3"></span>
+                        <span class="wave w4"></span><span class="wave w5"></span><span class="wave w6"></span>
+                        <span class="wave w7"></span><span class="wave w8"></span><span class="wave w9"></span>
+                    </div>
+                    <span class="audio-duration">03:14</span>
+                </div>
             </div>
 
             <div class="bento-grid">
