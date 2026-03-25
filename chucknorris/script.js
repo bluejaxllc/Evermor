@@ -91,21 +91,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. CTA Form Submit Handler
+    // 5. CTA Form Submit Handler (Google Apps CRM Integration)
     const ctaForm = document.getElementById('cta-form');
+    // Replace this string with the actual Web App URL after deploying GoogleAppsScript.js
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycb.../exec";
+
     if (ctaForm) {
         ctaForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const btn = ctaForm.querySelector('button[type="submit"]');
+            const emailInput = ctaForm.querySelector('input[type="email"]');
             const originalText = btn.textContent;
-            btn.textContent = '✓ Redirecting...';
+
+            btn.textContent = 'Authenticating...';
             btn.disabled = true;
             btn.style.opacity = '0.7';
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.disabled = false;
-                btn.style.opacity = '';
-            }, 2500);
+
+            const formData = new FormData();
+            formData.append('email', emailInput.value);
+
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                body: formData,
+            })
+                .then(response => response.json())
+                .then(data => {
+                    btn.textContent = '✓ Welcome to the Archive';
+                    btn.style.backgroundColor = 'var(--color-turquoise-dark)';
+                    emailInput.value = '';
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.disabled = false;
+                        btn.style.opacity = '';
+                        btn.style.backgroundColor = '';
+                    }, 3000);
+                })
+                .catch(error => {
+                    console.error('Submission error:', error);
+                    btn.textContent = '⚠ Network Error. Try Again.';
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.disabled = false;
+                        btn.style.opacity = '';
+                    }, 3000);
+                });
         });
     }
 
@@ -125,5 +154,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { threshold: 0.3 });
 
         progressObserver.observe(progressBar.closest('.funding-tracker'));
+    }
+
+    // 7. Vanilla Tilt for Funding Tier Cards
+    if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll(".tier-card"), {
+            max: 5,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.15,
+            scale: 1.02,
+        });
     }
 });
