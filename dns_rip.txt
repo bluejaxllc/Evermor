@@ -1,0 +1,3 @@
+﻿CNAME	www	300	[{"content":"h3pk63qf.up.railway.app.","is_disabled":false}]
+ALIAS	@	300	[{"content":"h3pk63qf.up.railway.app.","is_disabled":false}]
+A	@	300	[{"content":"2.57.91.91","is_disabled":false}]

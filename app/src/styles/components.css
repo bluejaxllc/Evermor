@@ -1,0 +1,90 @@
+/* ── Toast ────────────────────────────────────── */
+.toast-container {
+  position:fixed; top:1rem; right:1rem; z-index:9999;
+  display:flex; flex-direction:column; gap:0.5rem; pointer-events:none;
+}
+.toast {
+  display:flex; align-items:center; gap:0.75rem;
+  padding:0.75rem 1rem; border-radius:var(--radius-md);
+  background:var(--bg-surface); border:1px solid var(--border);
+  box-shadow:0 10px 40px rgba(0,0,0,0.5);
+  transform:translateX(120%); transition:transform 0.35s cubic-bezier(0.16,1,0.3,1);
+  pointer-events:auto; min-width:280px; max-width:400px;
+}
+.toast.show { transform:translateX(0); }
+.toast.hide { animation:toast-out 0.3s ease forwards; }
+@keyframes toast-out { to{transform:translateX(120%); opacity:0;} }
+
+.toast-icon { font-size:20px; flex-shrink:0; }
+.toast-success .toast-icon { color:var(--success); }
+.toast-error .toast-icon { color:var(--danger); }
+.toast-info .toast-icon { color:var(--turquoise); }
+.toast-warning .toast-icon { color:var(--warning); }
+
+.toast-message { flex:1; font-size:0.85rem; color:var(--off-white); }
+.toast-close {
+  background:none; border:none; color:var(--text-muted); cursor:pointer;
+  padding:0.15rem; border-radius:50%; flex-shrink:0;
+}
+.toast-close:hover { color:var(--white); }
+
+/* ── Modal ───────────────────────────────────── */
+.modal-overlay {
+  position:fixed; inset:0; z-index:1000;
+  background:rgba(0,0,0,0.7); backdrop-filter:blur(8px);
+  display:flex; align-items:center; justify-content:center; padding:2rem;
+  opacity:0; transition:opacity 0.25s ease;
+}
+.modal-overlay.show { opacity:1; }
+.modal-overlay.hide { animation:modal-out 0.25s ease forwards; }
+@keyframes modal-out { to{opacity:0;} }
+
+.modal {
+  background:var(--bg-surface); border:1px solid var(--border);
+  border-radius:var(--radius-xl); width:100%; overflow:hidden;
+  box-shadow:0 30px 80px rgba(0,0,0,0.6);
+  transform:scale(0.95) translateY(10px); transition:transform 0.3s cubic-bezier(0.16,1,0.3,1);
+}
+.modal-overlay.show .modal { transform:scale(1) translateY(0); }
+.modal-sm { max-width:400px; }
+.modal-md { max-width:560px; }
+.modal-lg { max-width:800px; }
+
+.modal-header {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:1.25rem 1.5rem; border-bottom:1px solid var(--border);
+}
+.modal-title { font-size:1.1rem; font-weight:600; }
+.modal-close-btn {
+  background:none; border:none; color:var(--text-muted); cursor:pointer;
+  padding:0.35rem; border-radius:50%; transition:var(--transition);
+}
+.modal-close-btn:hover { background:var(--bg-card-hover); color:var(--white); }
+.modal-body { padding:1.5rem; max-height:70vh; overflow-y:auto; }
+
+/* ── Radio Options (modal forms) ─────────────── */
+.radio-option {
+  display:flex; align-items:flex-start; gap:0.75rem;
+  padding:0.75rem; border:1px solid var(--border); border-radius:var(--radius-md);
+  cursor:pointer; margin-bottom:0.5rem; transition:var(--transition);
+}
+.radio-option:hover { border-color:var(--border-hover); }
+.radio-option input:checked ~ .radio-content .radio-label { color:var(--turquoise); }
+.radio-option:has(input:checked) { border-color:var(--turquoise); background:var(--turquoise-glow); }
+.radio-label { font-size:0.85rem; font-weight:600; color:var(--white); display:block; }
+.radio-desc { font-size:0.75rem; color:var(--text-muted); }
+
+/* ── Lightbox ────────────────────────────────── */
+.lightbox { text-align:center; }
+.lightbox img { max-height:60vh; border-radius:var(--radius-md); margin:0 auto; }
+.lightbox-caption { margin-top:1rem; color:var(--text-secondary); font-size:0.9rem; }
+
+/* ── Filter chips ────────────────────────────── */
+.filter-chip {
+  padding:0.4rem 1rem; border-radius:var(--radius-full);
+  background:var(--bg-card); border:1px solid var(--border);
+  color:var(--text-secondary); font-size:0.8rem; font-weight:500;
+  cursor:pointer; transition:var(--transition);
+}
+.filter-chip:hover { border-color:var(--border-hover); color:var(--white); }
+.filter-chip.active { background:var(--turquoise-glow); border-color:var(--turquoise); color:var(--turquoise); }

@@ -70,10 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
         revealOnScroll.observe(el);
     });
 
-    // 3. CTA Form Submit Handler
+    // 3. CTA Form Submit Handler → GHL CRM via Google Apps Script Bridge
     const ctaForm = document.getElementById('cta-form');
-    // TODO: Paste your deployed Google Apps Script Web App URL below
-    const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxIkIjWU8dqk22vnM_6SbC6m_jx_TighXkdyqDLNcJ7DxeUa1eY8FPXL4tdnQBwE97q/exec';
 
     if (ctaForm) {
         ctaForm.addEventListener('submit', (e) => {
@@ -88,19 +87,22 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.disabled = true;
             btn.style.opacity = '0.7';
 
-            const formData = new FormData();
-            formData.append('email', emailInput.value);
-
+            // Send structured JSON to Apps Script → GHL CRM
             fetch(GOOGLE_SCRIPT_URL, {
                 method: 'POST',
-                mode: 'no-cors', // Bypasses CORS issues
-                body: formData
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'text/plain' },
+                body: JSON.stringify({
+                    email: emailInput.value,
+                    source: 'Evermor Landing Page',
+                    campaign: 'evermor'
+                })
             })
                 .then(() => {
                     btn.textContent = 'Welcome to the Archive';
                     btn.style.backgroundColor = '#A7FFEB';
                     btn.style.color = '#0A0F12';
-                    emailInput.value = ''; // clear the input
+                    emailInput.value = '';
 
                     setTimeout(() => {
                         btn.textContent = originalText;

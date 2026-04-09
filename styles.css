@@ -238,28 +238,43 @@ a {
 }
 
 .nav-logo-img {
-    height: 40px;
+    height: 44px;
     width: auto;
     display: block;
-    filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.3));
+    mix-blend-mode: lighten;
+    filter: drop-shadow(-3px 0 8px rgba(29, 233, 182, 0.3)) drop-shadow(3px 0 8px rgba(255, 213, 79, 0.3));
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.nav-logo-img:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(-5px 0 14px rgba(29, 233, 182, 0.7)) drop-shadow(0 0 10px rgba(179, 136, 255, 0.5)) drop-shadow(5px 0 14px rgba(255, 138, 101, 0.6));
 }
 
 .loader-logo-img {
-    width: 120px;
+    width: 160px;
     height: auto;
     display: block;
     margin: 0 auto 2rem;
-    filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.5));
-    animation: logoPulse 2s ease-in-out infinite alternate;
+    mix-blend-mode: lighten;
+    animation: logoGlowCycle 3s ease-in-out infinite;
 }
 
-@keyframes logoPulse {
+@keyframes logoGlowCycle {
     0% {
-        filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.3));
+        filter: drop-shadow(-6px 0 16px rgba(29, 233, 182, 0.6)) drop-shadow(6px 0 4px rgba(255, 213, 79, 0.1));
+    }
+
+    33% {
+        filter: drop-shadow(-3px 0 8px rgba(29, 233, 182, 0.3)) drop-shadow(0 0 20px rgba(179, 136, 255, 0.6)) drop-shadow(3px 0 8px rgba(255, 213, 79, 0.3));
+    }
+
+    66% {
+        filter: drop-shadow(-6px 0 4px rgba(29, 233, 182, 0.1)) drop-shadow(6px 0 16px rgba(255, 138, 101, 0.6));
     }
 
     100% {
-        filter: drop-shadow(0 0 30px rgba(0, 229, 255, 0.7));
+        filter: drop-shadow(-6px 0 16px rgba(29, 233, 182, 0.6)) drop-shadow(6px 0 4px rgba(255, 213, 79, 0.1));
     }
 }
 
@@ -2278,6 +2293,11 @@ html.cursor-hover .cursor-outline {
 
 .badge-gold {
     background: #F59E0B;
+    color: #fff;
+}
+
+.badge-silver {
+    background: #94A3B8;
     color: #fff;
 }
 

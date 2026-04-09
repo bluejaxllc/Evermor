@@ -91,10 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. CTA Form Submit Handler (Google Apps CRM Integration)
+    // 5. CTA Form Submit Handler → GHL CRM via Google Apps Script Bridge
     const ctaForm = document.getElementById('cta-form');
-    // Replace this string with the actual Web App URL after deploying GoogleAppsScript.js
-    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycb.../exec";
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxIkIjWU8dqk22vnM_6SbC6m_jx_TighXkdyqDLNcJ7DxeUa1eY8FPXL4tdnQBwE97q/exec';
 
     if (ctaForm) {
         ctaForm.addEventListener('submit', (e) => {
@@ -107,15 +106,18 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.disabled = true;
             btn.style.opacity = '0.7';
 
-            const formData = new FormData();
-            formData.append('email', emailInput.value);
-
+            // Send structured JSON to Apps Script → GHL CRM
             fetch(GOOGLE_SCRIPT_URL, {
                 method: 'POST',
-                body: formData,
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'text/plain' },
+                body: JSON.stringify({
+                    email: emailInput.value,
+                    source: 'Chuck Norris Eternal Archive',
+                    campaign: 'chucknorris'
+                })
             })
-                .then(response => response.json())
-                .then(data => {
+                .then(() => {
                     btn.textContent = '✓ Welcome to the Archive';
                     btn.style.backgroundColor = 'var(--color-turquoise-dark)';
                     emailInput.value = '';

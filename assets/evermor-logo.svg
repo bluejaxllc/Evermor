@@ -1,34 +1,116 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" fill="none">
   <defs>
-    <linearGradient id="eg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- E Gradient: Cyan → Teal (cool, techy) -->
+    <linearGradient id="eg-e" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#00E5FF"/>
-      <stop offset="100%" stop-color="#A7FFEB"/>
+      <stop offset="100%" stop-color="#1DE9B6"/>
+    </linearGradient>
+    <!-- M Gradient: Gold → Warm Amber (warm, legacy) -->
+    <linearGradient id="eg-m" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD54F"/>
+      <stop offset="100%" stop-color="#FF8A65"/>
+    </linearGradient>
+    <!-- Center crossing blend gradient -->
+    <linearGradient id="eg-cross" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1DE9B6"/>
+      <stop offset="50%" stop-color="#B388FF"/>
+      <stop offset="100%" stop-color="#FFD54F"/>
     </linearGradient>
   </defs>
+
   <!--
-    EVERMOR E∞ Logo — v6
-    E on the left + proper crossing infinity symbol
+    EVERMOR E∞M Logo — v7 (Dual-color E/M reveal)
+    Left = E (cyan/teal), Right = M (gold/amber)
+    Center crossing = purple blend
   -->
-  <g stroke="url(#eg)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <!-- === E LETTERFORM === -->
-    <line x1="28" y1="30" x2="28" y2="170"/>
-    <line x1="28" y1="30" x2="100" y2="30"/>
-    <line x1="28" y1="170" x2="100" y2="170"/>
-    <line x1="28" y1="100" x2="165" y2="100"/>
-    
-    <!-- === PROPER INFINITY ∞ === -->
-    <!-- Upper-left to lower-right crossing path -->
-    <path d="
-      M 165,100
-      C 165,52  200,28  240,28
-      C 275,28  295,65  305,100
-      C 315,135  335,172  370,172
-      C 410,172  445,148  445,100
-      C 445,52  410,28  370,28
-      C 335,28  315,65  305,100
-      C 295,135  275,172  240,172
-      C 200,172  165,148  165,100
-      Z
-    "/>
-  </g>
+
+  <style>
+    .logo-e-spine, .logo-e-bars { stroke: url(#eg-e); }
+    .logo-m-loop { stroke: url(#eg-m); }
+    .logo-cross { stroke: url(#eg-cross); }
+
+    /* Stroke-draw animation */
+    .logo-e-spine {
+      stroke-dasharray: 140;
+      stroke-dashoffset: 140;
+      animation: draw-e-spine 0.8s ease-out 0.2s forwards;
+    }
+    .logo-e-bars {
+      stroke-dasharray: 200;
+      stroke-dashoffset: 200;
+      animation: draw-e-bars 0.6s ease-out 0.6s forwards;
+    }
+    .logo-e-left-loop {
+      stroke: url(#eg-e);
+      stroke-dasharray: 380;
+      stroke-dashoffset: 380;
+      animation: draw-left-loop 1.0s ease-in-out 0.9s forwards;
+    }
+    .logo-cross {
+      stroke-dasharray: 120;
+      stroke-dashoffset: 120;
+      animation: draw-cross 0.5s ease-in-out 1.4s forwards;
+    }
+    .logo-m-loop {
+      stroke-dasharray: 420;
+      stroke-dashoffset: 420;
+      animation: draw-m-loop 1.0s ease-in-out 1.6s forwards;
+    }
+
+    @keyframes draw-e-spine {
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes draw-e-bars {
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes draw-left-loop {
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes draw-cross {
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes draw-m-loop {
+      to { stroke-dashoffset: 0; }
+    }
+  </style>
+
+  <!-- === E LETTERFORM (Cyan/Teal) === -->
+  <!-- Vertical spine -->
+  <line class="logo-e-spine" x1="28" y1="30" x2="28" y2="170"
+        stroke-width="12" stroke-linecap="round"/>
+  <!-- Top bar -->
+  <line class="logo-e-bars" x1="28" y1="30" x2="100" y2="30"
+        stroke-width="12" stroke-linecap="round"/>
+  <!-- Bottom bar -->
+  <line class="logo-e-bars" x1="28" y1="170" x2="100" y2="170"
+        stroke-width="12" stroke-linecap="round"/>
+  <!-- Middle bar (extends into infinity) -->
+  <line class="logo-e-bars" x1="28" y1="100" x2="165" y2="100"
+        stroke-width="12" stroke-linecap="round"/>
+
+  <!-- === LEFT LOBE of INFINITY (still E's color, completing the E shape) === -->
+  <path class="logo-e-left-loop" d="
+    M 165,100
+    C 165,52  200,28  240,28
+    C 275,28  295,65  305,100
+    C 295,135  275,172  240,172
+    C 200,172  165,148  165,100
+    Z
+  " stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- === CENTER CROSSING (purple blend zone) === -->
+  <path class="logo-cross" d="
+    M 280,55
+    C 295,80  305,95  305,100
+    C 305,105  295,120  280,145
+  " stroke-width="12" stroke-linecap="round" fill="none"/>
+
+  <!-- === RIGHT LOBE — THE HIDDEN M (Gold/Amber) === -->
+  <path class="logo-m-loop" d="
+    M 305,100
+    C 315,135  335,172  370,172
+    C 410,172  445,148  445,100
+    C 445,52  410,28  370,28
+    C 335,28  315,65  305,100
+  " stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 </svg>
